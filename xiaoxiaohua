@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日一句名言</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>每日一句名言</h1>
+        <p id="quote">点击按钮获取今日名言！</p>
+        <button id="quoteBtn">获取名言</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机笑话生成器</title>
+    <style>
+        /* 内联CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #joke {
+            font-size: 1.5em;
+            margin: 20px 0;
+            color: #555;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>随机笑话生成器</h1>
+        <p id="joke">点击按钮获取一个笑话！</p>
+        <button id="jokeBtn">获取笑话</button>
+    </div>
+
+    <script>
+        // 内联JavaScript
+        const jokes = [
+            "为什么鸡不能过马路？因为鸡会“咯咯咯”地跑回家！",
+            "为什么书总是很冷静？因为它有很多页（冷静）。",
+            "为什么电脑很差劲？因为它总是有“字节”问题！",
+            "为什么数学书总是很难过？因为它有太多的问题！",
+            "为什么自行车不能站起来？因为它太“二”了！",
+            "为什么鱼不喜欢玩电脑？因为它怕被网住！",
+            "为什么番茄变红了？因为它看到了沙拉酱！",
+            "为什么蜗牛不喜欢跑步？因为它觉得太“慢”了！",
+            "为什么咖啡总是很紧张？因为它被“磨”得太多了！",
+            "为什么月亮总是很忙？因为它有很多“月”计划！"
+        ];
+
+        const jokeElement = document.getElementById('joke');
+        const jokeBtn = document.getElementById('jokeBtn');
+
+        jokeBtn.addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * jokes.length);
+            jokeElement.textContent = jokes[randomIndex];
+        });
+    </script>
+</body>
+</html>
